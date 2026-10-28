@@ -1,4 +1,4 @@
-# Semli dashboard milestone
+# Semli frontend milestones
 
 This repository currently contains a frontend-only prototype. It renders synthetic sample data and makes no Canvas request, account connection, AI request, or wellbeing assessment.
 
@@ -8,12 +8,16 @@ This repository currently contains a frontend-only prototype. It renders synthet
 2. Render a weekly workload rhythm from local mock data.
 3. Explain individual academic-context indicators in expandable, keyboard-accessible panels.
 4. Surface clearly-labelled example academic and optional-support recommendations.
+5. Add responsive, hash-based navigation for Home, My Patterns, Discover, and Settings.
+6. Build prototype-only patterns, resource, and privacy-settings interactions without real account or Canvas behavior.
 
 Deferred: authentication, Canvas OAuth and sync, persisted preferences, verified resource retrieval, browser extension, backend services, and any institutional workflows.
 
 ## Component hierarchy
 
-`App` → `Sidebar`, `WeeklyRhythm`, `IndicatorAccordion` → `Indicator`, `Recommendations` → `RecommendationColumn`, and shared `Avatar` / `Icon` components.
+`App` → `Sidebar` and page views (`HomePage`, `PatternsPage`, `DiscoverPage`, `SettingsPage`). Shared components include `PageHeader`, `CategoryTabs`, `WeeklyRhythm`, `IndicatorAccordion`, `SubmissionChart`, `Recommendations`, `SettingsRow`, `Avatar`, and `Icon`.
+
+`My Semli` is intentionally marked as a future milestone rather than rendered as an inactive account feature.
 
 ## Key product and technical risks
 
