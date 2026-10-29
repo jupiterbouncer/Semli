@@ -43,11 +43,15 @@ async function getRecommendations({
   }
 
   if (!usageTracker.isWithinBudget(context.studentId, budget)) {
+    // Awaited so fallbackProvider can itself be async (e.g. it needs to
+    // fetch student data before deriving a rule-based summary) — a plain
+    // synchronous function still works fine here too, `await` is a no-op
+    // on a non-promise value.
     return {
       source: 'fallback-rule-based',
       generatedAt: new Date().toISOString(),
       recommendations: [],
-      fallback: fallbackProvider(context),
+      fallback: await fallbackProvider(context),
     };
   }
 
