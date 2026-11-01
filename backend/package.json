@@ -1,12 +1,17 @@
 {
-  "name": "semli-analyzer",
+  "name": "semli-backend",
+  "private": true,
   "version": "0.1.0",
-  "description": "Component A: rule-based academic-pattern analyzer for Semli",
-  "main": "src/analyzer/index.js",
+  "type": "module",
   "scripts": {
-    "test": "jest"
+    "dev": "node node_modules/vite/bin/vite.js",
+    "build": "node node_modules/vite/bin/vite.js build",
+    "preview": "node node_modules/vite/bin/vite.js preview"
   },
-  "devDependencies": {
-    "jest": "^29.7.0"
-  }
+  "dependencies": {
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
 }
